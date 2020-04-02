@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-	  <component :is="layout">
-		  <router-view/>
-	  </component>
-  </div>
+	<div id="app">
+		<component :is="layout">
+			<router-view/>
+		</component>
+	</div>
 </template>
 
 <script>
@@ -22,6 +22,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~materialize-css/dist/css/materialize.min.css';
-@import 'assets/index.css';
+	@import '~materialize-css/dist/css/materialize.min.css';
+	@import 'assets/index.css';
 </style>

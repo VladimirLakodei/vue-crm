@@ -15,8 +15,6 @@ insert_final_newline = true
 # Set default charset
 [**.{html,css,js,vue}]
 charset = utf-8
-
-[**.{html,css,js,vue}]
 indent_style = tab
 indent_size = 4
 
