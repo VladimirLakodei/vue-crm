@@ -7,7 +7,7 @@
           id="email"
           type="text"
           v-model.trim="email"
-          :class="{invalid: ($v.email.$dirty && !$v.email.required) ||  ($v.email.$dirty && !$v.email.email)}" />
+          :class="{invalid: ($v.email.$dirty && !$v.email.required) ||  ($v.email.$dirty && !$v.email.email)}"/>
         <label for="email">Email</label>
         <small
           class="helper-text invalid"
@@ -32,7 +32,8 @@
         <small
           class="helper-text invalid"
           v-else-if="$v.password.$dirty && !$v.password.minLength"
-        >Пароль должен быть минимум {{$v.password.$params.minLength.min}} символов. Сейчас он {{password.length}}</small>
+        >Пароль должен быть минимум {{$v.password.$params.minLength.min}} символов. Сейчас он
+          {{password.length}}</small>
       </div>
       <div class="input-field">
         <input
@@ -47,11 +48,11 @@
           v-if="$v.name.$dirty && !$v.name.required"
         >
           Введите ваше имя
-		</small>
+        </small>
       </div>
       <p>
         <label>
-          <input type="checkbox" v-model="agree" />
+          <input type="checkbox" v-model="agree"/>
           <span>С правилами согласен</span>
         </label>
       </p>
@@ -59,8 +60,8 @@
     <div class="card-action">
       <div>
         <button
-            class="btn waves-effect waves-light auth-submit"
-            type="submit"
+          class="btn waves-effect waves-light auth-submit"
+          type="submit"
         >
           Зарегистрироваться
           <i class="material-icons right">send</i>
@@ -76,37 +77,37 @@
 </template>
 
 <script>
-import {email, required, minLength} from 'vuelidate/lib/validators'
+  import {email, required, minLength} from 'vuelidate/lib/validators'
 
-export default {
-  name: 'register',
-  data: () => ({
-    email: '',
-	password: '',
-	name: '',
-	agree: false
-  }),
-  validations: {
-    email: {email, required},
-	password: {required, minLength: minLength(6)},
-	name: {required},
-	agree: {checked: v => v},
-  },
-  methods: {
-    submitHandler() {
-      if(this.$v.$invalid) {
-        this.$v.$touch()
-        return
-	  }
+  export default {
+    name: 'register',
+    data: () => ({
+      email: '',
+      password: '',
+      name: '',
+      agree: false
+    }),
+    validations: {
+      email: {email, required},
+      password: {required, minLength: minLength(6)},
+      name: {required},
+      agree: {checked: v => v},
+    },
+    methods: {
+      submitHandler() {
+        if (this.$v.$invalid) {
+          this.$v.$touch()
+          return
+        }
 
-      const formData = {
-        email: this.email,
-        password: this.password,
-        name: this.name
-	  }
+        const formData = {
+          email: this.email,
+          password: this.password,
+          name: this.name
+        }
 
-      this.$router.push('/');
+        this.$router.push('/');
+      }
     }
   }
-}
 </script>
