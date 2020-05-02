@@ -166,7 +166,7 @@ export default {
   },
   destroyed() {
     if (this.select && this.select.destroy) {
-      this.select.destroy();
+      this.select.destroy()
     }
   }
 };
