@@ -1,4 +1,5 @@
 export default {
+  'login': 'Войдите в систему',
 	'logout': 'Вы вышли из системы',
   'auth/wrong-password': 'Неправильный пароль',
   'auth/user-not-found': 'Пользователя с таким email не существует',
