@@ -46,11 +46,11 @@
 </template>
 
 <script>
-import { required, minValue } from "vuelidate/lib/validators";
+import { required, minValue } from 'vuelidate/lib/validators'
 
 export default {
   data: () => ({
-    title: "",
+    title: '',
     limit: 1
   }),
   validations: {
@@ -58,12 +58,12 @@ export default {
     limit: { minValue: minValue(1) }
   },
   mounted() {
-    M.updateTextFields();
+    M.updateTextFields()
   },
   methods: {
     async submitHandler() {
       if (this.$v.$invalid) {
-        this.$v.$touch();
+        this.$v.$touch()
         return;
       }
 
