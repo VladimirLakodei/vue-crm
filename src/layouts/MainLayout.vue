@@ -58,9 +58,6 @@ export default {
   watch: {
     error(fbError) {
       this.$error(messages[fbError.code] || 'Что-то пошло не так')
-    },
-    locale() {
-      console.log('locale')
     }
   }
 }

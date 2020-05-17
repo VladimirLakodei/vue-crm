@@ -33,6 +33,11 @@ export default {
     loading: true,
     currency: null
   }),
+  metaInfo() {
+    return {
+      title: this.$title('Title_Bill')
+    }
+  },
   async mounted() {
     this.currency = await this.$store.dispatch('fetchCurrency')
     this.loading = false

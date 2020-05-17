@@ -44,8 +44,10 @@ export default {
     name: '',
     isRuLocale: true
   }),
-  metaInfo: {
-    title: 'Profile'
+  metaInfo() {
+    return {
+      title: this.$title('Title_Profile')
+    }
   },
   mounted() {
     this.name = this.info.name

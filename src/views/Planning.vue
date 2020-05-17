@@ -40,6 +40,11 @@ export default {
     loading: true,
     categories: []
   }),
+  metaInfo() {
+    return {
+      title: this.$title('Title_Planing')
+    }
+  },
   computed: {
     ...mapGetters(['info'])
   },

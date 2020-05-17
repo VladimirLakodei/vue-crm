@@ -31,6 +31,11 @@ export default {
     loading: true,
     updateCount: 0
   }),
+  metaInfo() {
+    return {
+      title: this.$title('Title_Categories')
+    }
+  },
   async mounted() {
     this.categories = await this.$store.dispatch('fetchCategories')
     this.loading = false

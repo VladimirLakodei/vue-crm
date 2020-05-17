@@ -7,5 +7,11 @@
 	"Menu_History": "История",
 	"Menu_Planing": "Планирование",
 	"Menu_NewRecord": "Новая запись",
-	"Menu_Categories": "Категории"
+	"Menu_Categories": "Категории",
+	"Title_Profile": "Профиль",
+	"Title_Bill": "Счет",
+	"Title_History": "История",
+	"Title_Planing": "Планирование",
+	"Title_NewRecord": "Новая запись",
+	"Title_Categories": "Категории"
 }
